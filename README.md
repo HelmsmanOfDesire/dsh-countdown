@@ -75,7 +75,7 @@
 ### 方式一：从 GitHub 直接安装（推荐，无需 npm）
 
 ```bash
-dsh plugin --profile web add github:sxh20154102013/dsh-workday-lantern
+dsh plugin --profile web add github:HelmsmanOfDesire/dsh-workday-lantern
 ```
 
 > 桌面版：`设置 → 插件 → 添加插件`，粘贴仓库地址。
@@ -139,7 +139,7 @@ dsh plugin --profile web add github:sxh20154102013/dsh-workday-lantern
 ## 卸载
 
 ```bash
-dsh plugin --profile web remove @sxh20154102013/workday-lantern
+dsh plugin --profile web remove @HelmsmanOfDesire/workday-lantern
 ```
 
 或：**设置 → 插件 → 下班倒计时插件 → 卸载**
@@ -149,7 +149,7 @@ dsh plugin --profile web remove @sxh20154102013/workday-lantern
 ## 开发
 
 ```bash
-git clone https://github.com/sxh20154102013/dsh-workday-lantern.git
+git clone https://github.com/HelmsmanOfDesire/dsh-workday-lantern.git
 cd dsh-workday-lantern
 ```
 
