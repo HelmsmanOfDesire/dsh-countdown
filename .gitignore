@@ -1,0 +1,36 @@
+# 依赖
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# 构建产物
+dist/
+*.tgz
+
+# 日志
+*.log
+npm-debug.log*
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 开发辅助（不入库）
+_preview*.html
+_verify*.mjs
+_audit*.mjs
+_perf*.mjs
+
+# 设计草稿（最终版是 icon.svg）
+icon-h.svg
+icon-h2.svg
+icon-hw-32.svg
+icon-hw-96.svg
+icon-whale.svg
+icon-final.svg

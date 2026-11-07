@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <!--
+    下班倒计时插件 · 官方图标
+    设计：字母 H 与沙漏融合的抽象符号
+      · 左右两根蓝色竖笔 = H 的两竖，同时是沙漏的左右玻璃壁
+      · 上下两个金色三角 = 沙漏的上锥/下锥（沙子）
+      · 中间红色横杠     = H 的横杠，同时是沙漏细颈处的沙流
+    透明背景：不画底板，跟随宿主深浅主题。
+    来源：用户于 2026-11-07 定稿，禁止替换或删除。
+  -->
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE9A8"/>
+      <stop offset="50%" stop-color="#F5C44A"/>
+      <stop offset="100%" stop-color="#D99A16"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7FD4EE"/>
+      <stop offset="100%" stop-color="#2E8FB5"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7A6E"/>
+      <stop offset="50%" stop-color="#E23B2E"/>
+      <stop offset="100%" stop-color="#B22117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- H 的两根竖笔（也是沙漏左右玻璃壁） -->
+  <rect x="16" y="12" width="10" height="72" rx="5" fill="url(#steel)"/>
+  <rect x="70" y="12" width="10" height="72" rx="5" fill="url(#steel)"/>
+
+  <!-- 上锥：玻璃轮廓用半透明描边，深浅主题都可见 -->
+  <path d="M31 18 H65 L48 45 Z" fill="none" stroke="url(#steel)" stroke-width="3.4"
+        stroke-linejoin="round" opacity="0.55"/>
+  <path d="M37 24 H59 L48 41 Z" fill="url(#sand)"/>
+
+  <!-- 下锥 -->
+  <path d="M31 78 H65 L48 51 Z" fill="none" stroke="url(#steel)" stroke-width="3.4"
+        stroke-linejoin="round" opacity="0.55"/>
+  <path d="M36 72 H60 L48 55 Z" fill="url(#sand)"/>
+
+  <!-- H 的横杠：贯通左右竖线，红色 -->
+  <rect x="20" y="43" width="56" height="10" rx="5" fill="url(#redBar)"/>
+  <!-- 中间亮芯 -->
+  <rect x="42" y="45.5" width="12" height="5" rx="2.5" fill="#FFD9D2"/>
+</svg>
