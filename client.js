@@ -1861,22 +1861,30 @@
         },
       }
 
-      /** 用 `<style>` 注入样式，返回清理函数（卸载时移除） */
+      /**
+       * 用 `<style>` 注入样式，返回清理函数（卸载时移除）。
+       *
+       * 【为什么不再用全局单例】
+       * 旧实现把注入的 <style> 存在 window.__DSH_WORKDAY_STYLES__ 这个全局变量里，
+       * 新实例挂载时会先 dispose 掉"上一个"的样式 —— 看起来能防重复注入，
+       * 实际是灾难：同一个插件以两个包名同时存在于 profile（例如从 @local 软链接
+       * 换成 GitHub 安装、旧条目没清干净）时，两个实例都会写这个全局，
+       * 后加载的会把前一个的 <style> 整个删掉，于是样式全失效：
+       * 沙漏失去 height:100% 约束撑满整块、文字被挤出可视区、进度线消失。
+       *
+       * 现在每个实例只管自己的 <style> 元素：
+       *   · 用 data 属性标记，便于识别
+       *   · dispose 只删自己创建的那个元素，绝不碰别人的
+       *   · 两份样式同时存在也没关系（内容相同，层叠结果一致）
+       */
       function insertStyles(css) {
-        const existing = window.__DSH_WORKDAY_STYLES__
-        if (existing && typeof existing.dispose === 'function') existing.dispose()
         const element = window.document.createElement('style')
         element.setAttribute('data-workday-lantern-style', '')
         element.textContent = css
         window.document.head.appendChild(element)
-        const handle = {
-          dispose() {
-            if (element.parentNode) element.parentNode.removeChild(element)
-            if (window.__DSH_WORKDAY_STYLES__ === handle) window.__DSH_WORKDAY_STYLES__ = undefined
-          },
+        return function dispose() {
+          if (element.parentNode) element.parentNode.removeChild(element)
         }
-        window.__DSH_WORKDAY_STYLES__ = handle
-        return handle.dispose
       }
     },
   })
