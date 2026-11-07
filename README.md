@@ -2,13 +2,19 @@
 
 <img src="icon.svg" width="96" height="96" alt="Workday Lantern" />
 
-# 下班倒计时插件 · Workday Lantern
+# DSH 倒计时 · DSH Countdown
 
 **在 DSH 的任意页面，看着时间从沙漏里漏走。**
 
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.2.1-4c6ef5)](https://github.com/deepseek-ai)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
+</div>
+
+<div align="center">
+  <img src="assets/screenshot-panel.png" width="320" alt="面板：沙漏倒计时 + 进度线" />
+  <br/>
+  <img src="assets/screenshot-settings.png" width="620" alt="时段设置：增删改时段，支持跨零点" />
 </div>
 
 ---
@@ -63,7 +69,7 @@
 点面板上的齿轮按钮，直接跳到本插件的配置页：
 
 ```
-插件 → 下班倒计时插件 → 时段设置
+插件 → DSH 倒计时 → 时段设置
 ```
 
 增删时段、改名称与时间，**改完立刻生效，不用刷新**。
@@ -95,6 +101,9 @@ dsh plugin --profile web add github:HelmsmanOfDesire/dsh-countdown
 | 上午班 | 08:30 → 12:00 |
 | 午休 | 12:00 → 13:30 |
 | 下午班 | 13:30 → 17:30 |
+| 下班 | 17:30 → 次日 08:30（跨零点） |
+
+默认四段覆盖全天，可随意增删改；删掉某段时间，那段时间面板就会显示「该时间段未配置」。
 
 **改时段**：点面板齿轮 → 编辑表格 → 改完自动保存。
 
@@ -142,7 +151,7 @@ dsh plugin --profile web add github:HelmsmanOfDesire/dsh-countdown
 dsh plugin --profile web remove @HelmsmanOfDesire/dsh-countdown
 ```
 
-或：**设置 → 插件 → 下班倒计时插件 → 卸载**
+或：**设置 → 插件 → DSH 倒计时 → 卸载**
 
 ---
 
