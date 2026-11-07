@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Workday Lantern",
-    "description": "A workday countdown that stays visible on every DSH page. An hourglass drains sand in true proportion to time, with freely configurable work periods and both elapsed and remaining timers."
+    "title": "DSH Countdown",
+    "description": "A workday countdown shown as an hourglass on every DSH page. Sand drains in true proportion to time, work periods are freely configurable, and both elapsed and remaining timers are shown."
   }
 }

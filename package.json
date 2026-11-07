@@ -1,5 +1,5 @@
 {
-  "name": "@HelmsmanOfDesire/workday-lantern",
+  "name": "@HelmsmanOfDesire/dsh-countdown",
   "version": "1.0.0",
   "description": "下班倒计时插件：在 DSH 任意页面显示沙漏倒计时，四段工作时段可自由配置，沙量按真实时间比例减少。",
   "keywords": [
@@ -15,11 +15,11 @@
   "author": "HelmsmanOfDesire",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HelmsmanOfDesire/dsh-workday-lantern.git"
+    "url": "git+https://github.com/HelmsmanOfDesire/dsh-countdown.git"
   },
-  "homepage": "https://github.com/HelmsmanOfDesire/dsh-workday-lantern#readme",
+  "homepage": "https://github.com/HelmsmanOfDesire/dsh-countdown#readme",
   "bugs": {
-    "url": "https://github.com/HelmsmanOfDesire/dsh-workday-lantern/issues"
+    "url": "https://github.com/HelmsmanOfDesire/dsh-countdown/issues"
   },
   "type": "module",
   "exports": {

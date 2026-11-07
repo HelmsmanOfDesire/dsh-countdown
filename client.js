@@ -17,7 +17,7 @@
   if (typeof window === 'undefined') return
 
   window.__ModuleLoader__.load({
-    id: '@HelmsmanOfDesire/workday-lantern',
+    id: '@HelmsmanOfDesire/dsh-countdown',
     factory(require) {
       const React = require('react')
       const h = React.createElement
@@ -25,7 +25,7 @@
       // ── 配置 ────────────────────────────────────────────────
       const PLUGIN_ID = 'workday-lantern'
       /** bundle 包名：plugins.bundle.config 席位按包名分发，必须与此一致 */
-      const PLUGIN_ID_PACKAGE = '@HelmsmanOfDesire/workday-lantern'
+      const PLUGIN_ID_PACKAGE = '@HelmsmanOfDesire/dsh-countdown'
       /*
        * ctx.layout 服务引用。
        * 组件是纯函数、拿不到 Cordis 的 ctx，而"点设置按钮跳到插件页"需要
