@@ -126,6 +126,21 @@ dsh plugin --profile web add github:HelmsmanOfDesire/dsh-countdown
 
 ---
 
+## 兼容性
+
+本插件运行在 **DSH Desktop（Electron 桌面端）** 内，浏览器内核随应用打包、用户无法自行更换，
+因此**兼容性看 DSH 版本，不看浏览器**。
+
+| 项 | 要求 |
+|---|---|
+| 宿主 | DeepSeek Harness（DSH）0.2.1 或更高 |
+| 平台 | Windows / macOS / Linux（DSH Desktop 支持的平台） |
+| 运行时 | DSH 内置 Node + Electron，无需自行安装 Node.js 或构建工具 |
+
+安装走 **预编译 tarball**，不需要本地编译环境。
+
+---
+
 ## 常见问题
 
 **问：为什么收起后没有设置按钮？**
